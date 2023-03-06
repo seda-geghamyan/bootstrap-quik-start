@@ -32,7 +32,7 @@ $btn-border-radius-sm: 12px;
 
 // colors
 $body-color: #2b2e35;
-$primary: rgb(15, 65, 4);
+$primary: rgb(43, 14, 203);
 $secondary: #5e98d9;
 $red: rgba(#eb4b4b, 0.5);
 $pink: rgba(#d32ce6, 0.5);
@@ -44,7 +44,24 @@ $green: rgba(#4eeb4b, 0.5);
 $orange: #f59d21;
 $light: #f8f8f8;
 $dark: #333;
-
+$primary-gradient: linear-gradient(
+  135.45deg,
+  $green 0%,
+  $primary 50%,
+  $primary 50%,
+  $green 100%
+);
+$danger-gradient: linear-gradient(
+  135.45deg,
+  $green 0%,
+  $red 50%,
+  $red 50%,
+  $green 100%
+);
+$gradient-backgrond: (
+  "primary": $primary-gradient,
+  "danger": $danger-gradient,
+);
 $theme-colors: (
     "body-color": $body-color,
     "primary": $primary,

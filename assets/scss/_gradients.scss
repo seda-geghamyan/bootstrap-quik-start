@@ -1,0 +1,37 @@
+@import "./mixins/_buttons";
+@import "./mixins/_bg-size";
+@import "./mixins/_texts";
+
+.btn {
+  height: 56px;
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      color: rgba($body-color, 0.16);
+      background: rgba($body-color, 0.16);
+      box-shadow: none;
+      outline: 0;
+      border-color: rgba($body-color, 0.16);
+    }
+  }
+}
+@each $color, $value in $gradient-backgrond {
+  .btn-gradient-#{$color} {
+    @include button-gradient-variant($color, $body-bg, $value, $color);
+  }
+  .bg-gradient-#{$color} {
+    @include bg-size;
+  }
+
+  .text-gradient-#{$color} {
+    @include text-gradient-variant($value);
+    @include bg-size;
+  }
+}
